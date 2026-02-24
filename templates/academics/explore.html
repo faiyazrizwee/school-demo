@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Explore - Co-Curricular{% endblock %}
+
+{% block content %}
+<div class="bg-light py-5">
+    <div class="container">
+        <h1 class="display-4 fw-bold text-primary text-center">Beyond The Classroom</h1>
+         <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Explore</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row g-4">
+        <!-- STEAM -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="img-hover-zoom">
+                     <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="STEAM">
+                </div>
+                <div class="card-body p-4">
+                    <h4 class="card-title fw-bold text-primary">STEAM Programs</h4>
+                    <p class="card-text text-muted">Integrating Science, Technology, Engineering, Arts, and Mathematics to solve real-world problems.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Communication -->
+        <div class="col-md-6 col-lg-4">
+             <div class="card h-100 border-0 shadow-sm">
+                <div class="img-hover-zoom">
+                     <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Communication">
+                </div>
+                <div class="card-body p-4">
+                    <h4 class="card-title fw-bold text-primary">Communication Skills</h4>
+                    <p class="card-text text-muted">Debate clubs, public speaking workshops, and Model United Nations (MUN) participation.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Science Fest -->
+        <div class="col-md-6 col-lg-4">
+             <div class="card h-100 border-0 shadow-sm">
+                 <div class="img-hover-zoom">
+                    <img src="https://images.unsplash.com/photo-1564325724739-bae0bd08762c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Science Fest">
+                 </div>
+                <div class="card-body p-4">
+                    <h4 class="card-title fw-bold text-primary">Science Fest</h4>
+                    <p class="card-text text-muted">Annual exhibition showcasing student innovations, experiments, and research projects.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Arts & Culture -->
+        <div class="col-md-6 col-lg-4">
+             <div class="card h-100 border-0 shadow-sm">
+                <div class="img-hover-zoom">
+                     <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Arts">
+                </div>
+                <div class="card-body p-4">
+                    <h4 class="card-title fw-bold text-primary">Arts & Culture</h4>
+                    <p class="card-text text-muted">A vibrant hub for painting, sculpture, pottery, and performing arts.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Sports -->
+         <div class="col-md-6 col-lg-4">
+             <div class="card h-100 border-0 shadow-sm">
+                 <div class="img-hover-zoom">
+                     <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Sports">
+                 </div>
+                <div class="card-body p-4">
+                    <h4 class="card-title fw-bold text-primary">Sports & Activities</h4>
+                    <p class="card-text text-muted">Comprehensive sports program including swimming, football, basketball, and tennis.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Community Service -->
+         <div class="col-md-6 col-lg-4">
+             <div class="card h-100 border-0 shadow-sm">
+                 <div class="img-hover-zoom">
+                    <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Community">
+                 </div>
+                <div class="card-body p-4">
+                    <h4 class="card-title fw-bold text-primary">Community Service</h4>
+                    <p class="card-text text-muted">Encouraging empathy and social responsibility through local outreach programs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

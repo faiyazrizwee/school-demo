@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="{% url 'home' %}">
+            <span class="fs-4">Green Valley</span> <span class="fs-6 text-muted d-block">International School</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                     <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'learn' %}active{% endif %}" href="{% url 'learn' %}">Learn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'explore' %}active{% endif %}" href="{% url 'explore' %}">Explore</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'innovate' %}active{% endif %}" href="{% url 'innovate' %}">Innovate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'careers' %}active{% endif %}" href="{% url 'careers' %}">Careers</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
+                <li class="nav-item dropdown ms-lg-3">
+                    <a class="btn btn-primary dropdown-toggle rounded-pill px-4" href="#" id="applyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Apply Now
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow border-0" aria-labelledby="applyDropdown">
+                        <li><a class="dropdown-item" href="{% url 'admission' %}">Admission Procedure</a></li>
+                        <li><a class="dropdown-item" href="{% url 'admission' %}#fees">Fee Structure</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item fw-bold text-primary" href="{% url 'admission' %}">Apply Online</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

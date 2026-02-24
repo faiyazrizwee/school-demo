@@ -1,0 +1,251 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %}Home{% endblock %}
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section d-flex align-items-center text-center min-vh-100" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{% static "images/hero_bg.png" %}') center center/cover no-repeat; background-attachment: fixed;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="display-3 fw-bold mb-4 text-white">
+          Green Valley International School
+        </h1>
+        <p class="lead mb-5 fs-4 text-white-50">
+          Nurturing curiosity, fostering innovation, and building the leaders of
+          tomorrow at Green Valley International School.
+        </p>
+        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+          <a
+            href="{% url 'admission' %}"
+            class="btn btn-primary btn-lg rounded-pill px-5 py-3 shadow">Apply Now</a>
+          <a
+            href="{% url 'learn' %}"
+            class="btn btn-outline-light btn-lg rounded-pill px-5 py-3">Explore Curriculum</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Learn Section -->
+<section class="py-5 bg-light">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="section-title text-primary display-5">Learn</h2>
+      <p class="lead text-muted">
+        A holistic approach to education from Pre-Primary to Senior Secondary.
+      </p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="img-hover-zoom">
+            <img
+              src="{% static 'images/istockphoto-1480246301-612x612.jpg' %}"
+              class="card-img-top"
+              alt="Primary School"
+            />
+          </div>
+          <div class="card-body p-4">
+            <h4 class="card-title fw-bold text-primary">Primary Years</h4>
+            <p class="card-text">
+              Building a strong foundation through playful enquiry and
+              experiential learning.
+            </p>
+            <a
+              href="{% url 'learn' %}"
+              class="btn btn-link text-decoration-none p-0 fw-bold"
+              >Read More &rarr;</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="img-hover-zoom">
+            <img
+              src="{% static 'images/middle_school.png' %}"
+              class="card-img-top"
+              alt="Middle School"/>
+          </div>
+          <div class="card-body p-4">
+            <h4 class="card-title fw-bold text-primary">Middle School</h4>
+            <p class="card-text">
+              Encouraging critical thinking and independent problem-solving
+              skills.
+            </p>
+            <a
+              href="{% url 'learn' %}"
+              class="btn btn-link text-decoration-none p-0 fw-bold"
+              >Read More &rarr;</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="img-hover-zoom">
+            <img
+              src="{% static 'images/senior_school.png' %}"
+              class="card-img-top"
+              alt="Senior School"
+            />
+          </div>
+          <div class="card-body p-4">
+            <h4 class="card-title fw-bold text-primary">Senior School</h4>
+            <p class="card-text">
+              Preparing students for global universities with rigorous academic
+              programs.
+            </p>
+            <a
+              href="{% url 'learn' %}"
+              class="btn btn-link text-decoration-none p-0 fw-bold"
+              >Read More &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Explore Section -->
+<section class="py-5">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="section-title text-primary display-5">Explore</h2>
+      <p class="lead text-muted">
+        Beyond the classroom: Arts, Sports, and Co-curricular activities.
+      </p>
+    </div>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <div class="img-hover-zoom rounded-3 shadow">
+          <img
+            src="{% static 'images/arts_culture.jpg' %}"
+            class="img-fluid rounded-3"
+            alt="Arts and Culture"
+          />
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h3 class="fw-bold text-primary mb-3">Arts & Culture</h3>
+        <p class="lead">
+          Unleashing creativity through Visual Arts, Music, Dance, and Drama.
+        </p>
+        <p class="text-muted mb-4">
+          Our dedicated arts wing provides the perfect canvas for students to
+          express themselves and discover their artistic passions.
+        </p>
+        <a
+          href="{% url 'explore' %}"
+          class="btn btn-outline-primary rounded-pill px-4"
+          >Discover More</a>
+      </div>
+    </div>
+    <div class="row g-4 align-items-center mt-5">
+      <div class="col-lg-6 order-lg-2">
+        <div class="img-hover-zoom rounded-3 shadow">
+          <img
+            src="{% static 'images/sport.jpg' %}"
+            class="img-fluid rounded-3"
+            alt="Sports"
+          />
+        </div>
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <h3 class="fw-bold text-primary mb-3">Sports & Athletics</h3>
+        <p class="lead">
+          Building character, teamwork, and resilience through sports.
+        </p>
+        <p class="text-muted mb-4">
+          World-class facilities for Football, Cricket, Basketball, Swimming,
+          and Athletics ensure every student stays active and healthy.
+        </p>
+        <a
+          href="{% url 'explore' %}"
+          class="btn btn-outline-primary rounded-pill px-4"
+          >View Activities</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Innovate Section -->
+<section class="py-5 bg-primary text-white">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="section-title text-white display-5">Innovate</h2>
+      <p class="lead text-white-50">
+        Empowering the next generation of tech leaders.
+      </p>
+    </div>
+    <div class="row g-4 text-center">
+      <div class="col-md-3">
+        <div class="p-4 border border-white border-opacity-25 rounded-3 h-100">
+          <div class="feature-icon text-white mb-3">
+            <i class="bi bi-robot"></i>
+          </div>
+          <h4 class="fw-bold">Robotics</h4>
+          <p class="small text-white-50">
+            Hands-on experience with designing and programming robots.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-4 border border-white border-opacity-25 rounded-3 h-100">
+          <div class="feature-icon text-white mb-3">
+            <i class="bi bi-code-slash"></i>
+          </div>
+          <h4 class="fw-bold">Coding</h4>
+          <p class="small text-white-50">
+            Learning Python, Java, and Web Development from an early age.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-4 border border-white border-opacity-25 rounded-3 h-100">
+          <div class="feature-icon text-white mb-3">
+            <i class="bi bi-vector-pen"></i>
+          </div>
+          <h4 class="fw-bold">Design</h4>
+          <p class="small text-white-50">
+            Mastering 3D modelling and Graphic Design tools.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-4 border border-white border-opacity-25 rounded-3 h-100">
+          <div class="feature-icon text-white mb-3">
+            <i class="bi bi-lightbulb"></i>
+          </div>
+          <h4 class="fw-bold">Makerspace</h4>
+          <p class="small text-white-50">
+            A dedicated space for DIY projects and creative problem solving.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <a
+        href="{% url 'innovate' %}"
+        class="btn btn-light rounded-pill px-5 shadow"
+        >See Innovation Lab</a>
+    </div>
+  </div>
+</section>
+
+<!-- Evolve Section (CTA) -->
+<section class="py-5 text-center">
+  <div class="container py-5">
+    <h2 class="display-5 fw-bold text-primary mb-4">Evolve with Us</h2>
+    <p class="lead text-muted mb-5 col-lg-8 mx-auto">
+      Join a community that values excellence, integrity, and global
+      citizenship. Your journey to a bright future starts here.
+    </p>
+    <a
+      href="{% url 'contact' %}"
+      class="btn btn-primary btn-lg rounded-pill px-5"
+      >Get in Touch</a>
+  </div>
+</section>
+{% endblock %}

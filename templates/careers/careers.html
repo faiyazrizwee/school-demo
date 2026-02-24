@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Careers{% endblock %}
+
+{% block content %}
+<div class="bg-light py-5">
+    <div class="container">
+        <h1 class="display-4 fw-bold text-primary text-center">Join Our Team</h1>
+         <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Careers</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="text-center mb-5 col-lg-8 mx-auto">
+        <h2 class="section-title text-primary">Work With Us</h2>
+        <p class="lead">We are looking for passionate educators and staff to join the Green Valley family. Browse our current openings below.</p>
+    </div>
+
+    <div class="row g-4">
+        <!-- Job 1 -->
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h4 class="fw-bold text-primary">Primary School Teacher</h4>
+                            <span class="badge bg-success">Full Time</span>
+                            <span class="badge bg-secondary">Academics</span>
+                        </div>
+                        <div class="text-muted small">Posted 2 days ago</div>
+                    </div>
+                    <p class="card-text text-muted">We are seeking an experienced Primary School Teacher to join our team. The ideal candidate will have a passion for child development and creative teaching methodologies.</p>
+                    <ul class="list-unstyled text-muted small mb-4">
+                        <li><i class="bi bi-check2-circle text-primary me-2"></i>B.Ed or equivalent qualification</li>
+                        <li><i class="bi bi-check2-circle text-primary me-2"></i>Minimum 3 years experience</li>
+                        <li><i class="bi bi-check2-circle text-primary me-2"></i>Excellent communication skills</li>
+                    </ul>
+                    <button class="btn btn-outline-primary" onclick="alert('Application submitted (Demo)');">Apply Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                 <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h4 class="fw-bold text-primary">Mathematics Faculty (High School)</h4>
+                            <span class="badge bg-success">Full Time</span>
+                             <span class="badge bg-secondary">Academics</span>
+                        </div>
+                        <div class="text-muted small">Posted 1 week ago</div>
+                    </div>
+                    <p class="card-text text-muted">Looking for a dynamic Mathematics teacher for grades 9-12. Proficiency in CBSE and IB curriculum is preferred.</p>
+                     <ul class="list-unstyled text-muted small mb-4">
+                        <li><i class="bi bi-check2-circle text-primary me-2"></i>Masters in Mathematics</li>
+                        <li><i class="bi bi-check2-circle text-primary me-2"></i>Experience in competitive exam coaching</li>
+                        <li><i class="bi bi-check2-circle text-primary me-2"></i>Tech-savvy teaching approach</li>
+                    </ul>
+                    <button class="btn btn-outline-primary" onclick="alert('Application submitted (Demo)');">Apply Now</button>
+                </div>
+            </div>
+        </div>
+        
+         <!-- Job 3 -->
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                 <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h4 class="fw-bold text-primary">Sports Coach</h4>
+                            <span class="badge bg-success">Contract</span>
+                             <span class="badge bg-info text-dark">Sports</span>
+                        </div>
+                         <div class="text-muted small">Posted 2 weeks ago</div>
+                    </div>
+                    <p class="card-text text-muted">Football and Athletics coach required. Must have certification and experience working with school children.</p>
+                     <ul class="list-unstyled text-muted small mb-4">
+                        <li><i class="bi bi-check2-circle text-primary me-2"></i>Certified Coach</li>
+                        <li><i class="bi bi-check2-circle text-primary me-2"></i>Patient and motivating</li>
+                         <li><i class="bi bi-check2-circle text-primary me-2"></i>First aid certified</li>
+                    </ul>
+                    <button class="btn btn-outline-primary" onclick="alert('Application submitted (Demo)');">Apply Now</button>
+                </div>
+            </div>
+        </div>
+        
+         <!-- Job 4 -->
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                 <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h4 class="fw-bold text-primary">Lab Assistant (Physics)</h4>
+                            <span class="badge bg-success">Full Time</span>
+                             <span class="badge bg-warning text-dark">Lab</span>
+                        </div>
+                         <div class="text-muted small">Posted 3 weeks ago</div>
+                    </div>
+                    <p class="card-text text-muted">Responsible for maintaining the Physics lab, setting up experiments, and assisting students during practical sessions.</p>
+                     <ul class="list-unstyled text-muted small mb-4">
+                        <li><i class="bi bi-check2-circle text-primary me-2"></i>B.Sc Physics</li>
+                        <li><i class="bi bi-check2-circle text-primary me-2"></i>Safety protocols knowledge</li>
+                         <li><i class="bi bi-check2-circle text-primary me-2"></i>Organized and attentive</li>
+                    </ul>
+                    <button class="btn btn-outline-primary" onclick="alert('Application submitted (Demo)');">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

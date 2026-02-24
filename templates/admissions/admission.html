@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Admissions{% endblock %}
+
+{% block content %}
+<div class="bg-primary text-white py-5">
+    <div class="container">
+        <h1 class="display-4 fw-bold text-center">Admission Process</h1>
+         <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}" class="text-white-50 text-decoration-none">Home</a></li>
+                <li class="breadcrumb-item active text-white" aria-current="page">Admissions</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row g-5">
+        <div class="col-lg-8">
+            <h2 class="fw-bold text-primary mb-4">How to Apply</h2>
+            <p class="lead">We welcome students from all backgrounds who share our passion for learning.</p>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-3"><span class="badge bg-primary rounded-circle me-2">1</span> Registration</h5>
+                    <p class="mb-0">Fill out the online enquiry form or visit the school admission office to collect the registration form. A registration fee of $50 is applicable.</p>
+                </div>
+            </div>
+             <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-3"><span class="badge bg-primary rounded-circle me-2">2</span> Assessment / Interaction</h5>
+                    <p class="mb-0">For primary and above, a short assessment will be conducted to understand the student's grade readiness. For pre-primary, an interaction with parents and the child is scheduled.</p>
+                </div>
+            </div>
+             <div class="card border-0 shadow-sm mb-5">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-3"><span class="badge bg-primary rounded-circle me-2">3</span> Admission Offer</h5>
+                    <p class="mb-0">Successful candidates will receive an admission offer letter. Parents must complete the formalities and pay the fees within the stipulated time to secure the seat.</p>
+                </div>
+            </div>
+
+            <h3 id="fees" class="fw-bold text-primary mb-4 mt-5">Fee Structure (Annual)</h3>
+            <div class="table-responsive shadow-sm rounded-3">
+                <table class="table table-hover mb-0">
+                    <thead class="bg-light">
+                        <tr>
+                            <th scope="col" class="py-3 ps-4">Grade Level</th>
+                            <th scope="col" class="py-3">Tuition Fee</th>
+                            <th scope="col" class="py-3">Activity Fee</th>
+                            <th scope="col" class="py-3 pe-4">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ps-4 fw-bold">Pre-Primary</td>
+                            <td>$3,000</td>
+                            <td>$500</td>
+                            <td class="pe-4 fw-bold">$3,500</td>
+                        </tr>
+                        <tr>
+                            <td class="ps-4 fw-bold">Primary (Grade 1-5)</td>
+                            <td>$4,500</td>
+                            <td>$800</td>
+                            <td class="pe-4 fw-bold">$5,300</td>
+                        </tr>
+                        <tr>
+                            <td class="ps-4 fw-bold">Middle (Grade 6-8)</td>
+                            <td>$5,500</td>
+                            <td>$1,000</td>
+                            <td class="pe-4 fw-bold">$6,500</td>
+                        </tr>
+                        <tr>
+                             <td class="ps-4 fw-bold">Secondary (Grade 9-10)</td>
+                            <td>$6,500</td>
+                            <td>$1,200</td>
+                            <td class="pe-4 fw-bold">$7,700</td>
+                        </tr>
+                         <tr>
+                             <td class="ps-4 fw-bold">Senior (Grade 11-12)</td>
+                            <td>$7,500</td>
+                            <td>$1,500</td>
+                            <td class="pe-4 fw-bold">$9,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="card bg-light border-0 shadow-sm p-3 position-sticky" style="top: 100px;">
+                <div class="card-body">
+                    <h4 class="fw-bold mb-3">Ready to Join?</h4>
+                    <p class="text-muted">Applications for the academic year 2024-25 are now open.</p>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary btn-lg" onclick="alert('Applications are closed for the demo.');">Apply Online</button>
+                        <a href="{% url 'contact' %}" class="btn btn-outline-primary">Contact Admissions</a>
+                    </div>
+                    <hr>
+                    <h6 class="fw-bold"><i class="bi bi-file-earmark-pdf text-danger me-2"></i>Downloads</h6>
+                   <ul class="list-unstyled mt-3">
+                       <li class="mb-2"><a href="#" class="text-decoration-none">Admission Brochure</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">School Handbook</a></li>
+                         <li><a href="#" class="text-decoration-none">Transport Policy</a></li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

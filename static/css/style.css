@@ -1,0 +1,394 @@
+:root {
+    --primary-color: #6A8C7A;  /* Warm Olive */
+    --secondary-color: #9AB8A5; /* Soft Mint */
+    --accent-color: #F5C68B;    /* Warm Apricot */
+    --text-color: #333333;
+    --light-bg: #F4F1E6;
+    --font-heading: 'Outfit', sans-serif;
+}
+
+body {
+    font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
+    /* Fallback for body text */
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+    font-family: var(--font-heading);
+}
+/* Tab Navigation Styling */
+.nav-pills {
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.nav-pills .nav-link {
+    color: var(--text-color);
+    background-color: transparent;
+    border: 2px solid transparent;
+    padding: 12px 24px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Default hover effect */
+.nav-pills .nav-link:hover {
+    background-color: var(--light-bg);
+    border-color: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Active tab styling */
+.nav-pills .nav-link.active {
+    background-color: var(--primary-color);
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(106, 140, 122, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Click effect (active state) */
+.nav-pills .nav-link:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Add a subtle animation on click */
+.nav-pills .nav-link:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(106, 140, 122, 0.3);
+}
+
+/* Style for the button container */
+.tab-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+/* ===== NAVBAR STYLING ===== */
+.navbar {
+    padding: 24px 0;
+    background-color: white !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-family: var(--font-heading);
+    padding: 0;
+}
+
+.navbar-brand .fs-4 {
+    color: var(--primary-color);
+    font-weight: 1000;
+    line-height: 1.2;
+}
+
+.navbar-brand .fs-6 {
+    color: #6c757d;
+    font-size: 0.7rem !important;
+    letter-spacing: 0.3px;
+    margin-top: -2px;
+}
+
+/* Navbar Navigation Links */
+.navbar-nav {
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 2px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 16px !important;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+    background-color: rgba(106, 140, 122, 0.08);
+}
+
+/* Active Nav Link - IMPORTANT: Override Bootstrap */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link[aria-current="page"] {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+    background-color: rgba(106, 140, 122, 0.12);
+}
+
+/* Remove any conflicting active styles */
+.nav-link.active {
+    font-weight: 600;
+    color: var(--primary-color) !important;
+}
+
+/* Apply Now Button */
+.navbar .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    padding: 8px 24px !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(106, 140, 122, 0.2);
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.navbar .btn-primary:hover {
+    background-color: #4F7363;
+    border-color: #4F7363;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(106, 140, 122, 0.3);
+}
+
+/* Dropdown Menu */
+.navbar .dropdown-menu {
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    min-width: 220px;
+}
+
+.navbar .dropdown-item {
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: rgba(106, 140, 122, 0.1);
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.navbar .dropdown-item.text-primary {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    border: 2px solid var(--primary-color);
+    padding: 5px 10px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(106, 140, 122, 0.2);
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%236A8C7A' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 20px 0;
+        gap: 5px;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 10px 20px !important;
+        text-align: center;
+    }
+    
+    .navbar .btn-primary {
+        margin: 10px 0 0 0;
+        width: 100%;
+    }
+    
+    .navbar-nav .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .navbar .dropdown-menu {
+        box-shadow: none;
+        border: 1px solid rgba(106, 140, 122, 0.1);
+        margin-top: 5px;
+    }
+}
+
+/* Fix for the active class conflict */
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+    background-color: rgba(106, 140, 122, 0.12);
+}
+
+/* Override any Bootstrap defaults */
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+    color: var(--primary-color) !important;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+}
+
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #4F7363;  /* Darker shade of Warm Olive */
+    border-color: #4F7363;
+    color: white;
+    transform: translateY(-2px);  /* Optional subtle lift */
+    box-shadow: 0 4px 8px rgba(106, 140, 122, 0.3);  /* Optional shadow with primary color tint */
+}
+
+.btn-outline-primary {
+    background-color: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* Match with your card titles */
+.card .btn-link {
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.card .btn-link:hover {
+    color: #a2b0aa;  /* Darker olive */
+    transform: translateX(5px);
+}
+
+
+.hero-section {
+    background: linear-gradient(rgba(93, 140, 123, 0.7), rgba(138, 178, 166, 0.6)), url('../images/hero_bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 150px 0;
+}
+
+/* Optional: Add a subtle animation to the background */
+.hero-section {
+  animation: zoomEffect 20s infinite alternate ease-in-out;
+}
+
+@keyframes zoomEffect {
+  0% {
+    background-size: 100% auto;
+  }
+  100% {
+    background-size: 110% auto;
+  }
+}
+
+/* Ensure content is properly centered */
+.hero-section .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Make text more readable with the overlay */
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(13, 71, 161, 0.6), rgba(13, 71, 161, 0.4)), url('../images/hero_bg.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-bg);
+    padding: 150px 0;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.nav-link.active {
+    font-weight: 600;
+    color: var(--primary-color) !important;
+}
+
+/* Hover effects for images */
+.img-hover-zoom {
+    overflow: hidden;
+}
+
+.img-hover-zoom img {
+    transition: transform 0.5s ease;
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.1);
+}

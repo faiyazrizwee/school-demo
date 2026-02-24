@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Innovate - Technology & Design{% endblock %}
+
+{% block content %}
+<div class="bg-primary text-white py-5">
+    <div class="container">
+        <h1 class="display-4 fw-bold text-center">Design & Technology</h1>
+        <p class="lead text-center text-white-50">Future-ready skills for a digital world</p>
+         <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}" class="text-white-50 text-decoration-none">Home</a></li>
+                <li class="breadcrumb-item active text-white" aria-current="page">Innovate</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container py-5">
+    <!-- Feature 1 -->
+    <div class="row align-items-center mb-5">
+        <div class="col-lg-5">
+            <img src="{% static 'images/robotics_ai.jpg' %}" class="img-fluid rounded-3 shadow" alt="Robotics">
+        </div>
+        <div class="col-lg-7 ps-lg-5 mt-4 mt-lg-0">
+            <span class="badge bg-primary mb-2 rounded-pill px-3 py-2">Flagship Program</span>
+            <h2 class="fw-bold text-primary">Robotics & AI</h2>
+            <p class="lead text-muted">From building simple bots to programming complex autonomous systems.</p>
+            <p>Our Robotics lab is equipped with the latest kits including LEGO Mindstorms, Arduino, and Raspberry Pi. Students learn to code and construct robots, participating in national and international competitions.</p>
+        </div>
+    </div>
+    
+    <hr class="my-5 opacity-25">
+
+    <!-- Feature 2 -->
+     <div class="row align-items-center mb-5">
+        <div class="col-lg-5 order-lg-2">
+            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-3 shadow" alt="Coding">
+        </div>
+        <div class="col-lg-7 order-lg-1 pe-lg-5 mt-4 mt-lg-0">
+             <h2 class="fw-bold text-primary">Programming & App Dev</h2>
+            <p class="lead text-muted">Logic, algorithms, and the language of the future.</p>
+            <p>Students start with block-based coding and progress to Python, Java, and Web Development. The curriculum encourages creating real-world applications and solving computational problems.</p>
+        </div>
+    </div>
+
+    <hr class="my-5 opacity-25">
+
+     <!-- Feature 3 -->
+    <div class="row align-items-center mb-5">
+        <div class="col-lg-5">
+             <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-3 shadow" alt="Graphics">
+        </div>
+        <div class="col-lg-7 ps-lg-5 mt-4 mt-lg-0">
+            <h2 class="fw-bold text-primary">Graphics & Animation</h2>
+            <p class="lead text-muted">Bringing imagination to life through digital art.</p>
+            <p>Using industry-standard software, students explore graphic design, 3D modelling, and animation. From poster design to short films, creativity knows no bounds.</p>
+        </div>
+    </div>
+    
+     <hr class="my-5 opacity-25">
+     
+      <!-- Feature 4 -->
+    <div class="row align-items-center">
+        <div class="col-lg-5 order-lg-2">
+            <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-3 shadow" alt="Sound">
+        </div>
+        <div class="col-lg-7 order-lg-1 pe-lg-5 mt-4 mt-lg-0">
+            <h2 class="fw-bold text-primary">Sound Production</h2>
+            <p class="lead text-muted">The art and science of audio engineering.</p>
+            <p>Our studio allows students to record, mix, and produce their own music and podcasts, understanding the technical aspects of sound.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

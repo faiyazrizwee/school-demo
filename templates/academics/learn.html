@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Learn - Academics{% endblock %}
+
+{% block content %}
+<div class="bg-light py-5">
+    <div class="container">
+        <h1 class="display-4 fw-bold text-primary text-center">Our Approach to Learning</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Learn</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container py-5">
+    <!-- Academic Stages Tabs -->
+    <ul class="nav nav-pills nav-fill mb-5" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active rounded-pill fw-bold" id="pills-pre-tab" data-bs-toggle="pill" data-bs-target="#pills-pre" type="button" role="tab" aria-controls="pills-pre" aria-selected="true">Pre-Primary</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-pill fw-bold" id="pills-primary-tab" data-bs-toggle="pill" data-bs-target="#pills-primary" type="button" role="tab" aria-controls="pills-primary" aria-selected="false">Primary</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-pill fw-bold" id="pills-middle-tab" data-bs-toggle="pill" data-bs-target="#pills-middle" type="button" role="tab" aria-controls="pills-middle" aria-selected="false">Middle School</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-pill fw-bold" id="pills-secondary-tab" data-bs-toggle="pill" data-bs-target="#pills-secondary" type="button" role="tab" aria-controls="pills-secondary" aria-selected="false">Secondary</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-pill fw-bold" id="pills-senior-tab" data-bs-toggle="pill" data-bs-target="#pills-senior" type="button" role="tab" aria-controls="pills-senior" aria-selected="false">Senior Secondary</button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+        <!-- Pre-Primary -->
+        <div class="tab-pane fade show active" id="pills-pre" role="tabpanel" aria-labelledby="pills-pre-tab">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="{% static 'images/pre_primary.jpg' %}" class="img-fluid rounded-3 shadow" alt="Pre-Primary">
+                </div>
+                <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
+                    <h3 class="fw-bold text-primary mb-3">Early Years Foundation</h3>
+                    <p class="lead">Play-based learning where curiosity drives discovery.</p>
+                    <p>Our pre-primary curriculum focuses on the holistic development of the child, integrating social, emotional, cognitive, and physical growth through interactive playful activities.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Primary -->
+        <div class="tab-pane fade" id="pills-primary" role="tabpanel" aria-labelledby="pills-primary-tab">
+             <div class="row align-items-center">
+                <div class="col-md-6 order-md-2">
+                    <img src="{% static 'images/primary.webp' %}" class="img-fluid rounded-3 shadow" alt="Primary">
+                </div>
+                <div class="col-md-6 order-md-1 pe-md-5 mt-4 mt-md-0">
+                    <h3 class="fw-bold text-primary mb-3">Primary Years</h3>
+                    <p class="lead">Building literacy, numeracy, and strong enquiry skills.</p>
+                    <p>Students engage in project-based learning that encourages them to ask questions and find answers. The core subjects are supplemented by arts, sports, and language programs.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Middle -->
+        <div class="tab-pane fade" id="pills-middle" role="tabpanel" aria-labelledby="pills-middle-tab">
+             <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-3 shadow" alt="Middle School">
+                </div>
+                <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
+                    <h3 class="fw-bold text-primary mb-3">Middle School</h3>
+                    <p class="lead">Fostering independence and critical thinking.</p>
+                    <p>The curriculum broadens to include specialized subjects, preparing students for higher academic challenges while nurturing their individual interests and talents.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Secondary -->
+        <div class="tab-pane fade" id="pills-secondary" role="tabpanel" aria-labelledby="pills-secondary-tab">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-2">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-3 shadow" alt="Secondary">
+                </div>
+                <div class="col-md-6 order-md-1 pe-md-5 mt-4 mt-md-0">
+                    <h3 class="fw-bold text-primary mb-3">Secondary School</h3>
+                    <p class="lead">Academic rigor and personal growth.</p>
+                    <p>Students prepare for board examinations with focused guidance, while developing leadership skills and participating in a wide range of co-curricular activities.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Senior Secondary -->
+         <div class="tab-pane fade" id="pills-senior" role="tabpanel" aria-labelledby="pills-senior-tab">
+             <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="{% static 'images/senior_secondary.jpg' %}" class="img-fluid rounded-3 shadow" alt="Senior Secondary">
+                </div>
+                <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
+                    <h3 class="fw-bold text-primary mb-3">Senior Secondary</h3>
+                    <p class="lead">Pathways to university and beyond.</p>
+                    <p>We offer specialized streams in Science, Commerce, and Humanities, providing personalized career counseling and mentorship to help students achieve their goals.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Curriculum Boards -->
+<div class="bg-primary text-white py-5 mt-5">
+    <div class="container">
+        <h2 class="text-center mb-5 display-5 fw-bold">Our Curriculam</h2>
+        <div class="row g-4 text-center">
+             <div class="col-md-3">
+                <div class="p-4 border border-white rounded-3 h-100">
+                    <h3 class="fw-bold">CBSE</h3>
+                    <p class="small text-white-50">Central Board of Secondary Education</p>
+                </div>
+             </div>
+              <div class="col-md-3">
+                <div class="p-4 border border-white rounded-3 h-100">
+                    <h3 class="fw-bold">IGCSE</h3>
+                    <p class="small text-white-50">Cambridge Assessment International Education</p>
+                </div>
+             </div>
+              <div class="col-md-3">
+                <div class="p-4 border border-white rounded-3 h-100">
+                    <h3 class="fw-bold">IB MYP</h3>
+                    <p class="small text-white-50">International Baccalaureate Middle Years Programme</p>
+                </div>
+             </div>
+              <div class="col-md-3">
+                <div class="p-4 border border-white rounded-3 h-100">
+                    <h3 class="fw-bold">IB DP</h3>
+                    <p class="small text-white-50">International Baccalaureate Diploma Programme</p>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

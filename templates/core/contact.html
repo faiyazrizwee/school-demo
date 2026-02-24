@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<div class="bg-light py-5">
+    <div class="container">
+        <h1 class="display-4 fw-bold text-primary text-center">Contact Us</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row g-5">
+        <div class="col-lg-5">
+            <h2 class="fw-bold text-primary mb-4">Get In Touch</h2>
+            <p class="lead mb-5">Have questions? We'd love to hear from you. Reach out to us for admissions, general inquiries, or just to say hello.</p>
+            
+            <div class="d-flex mb-4">
+                <div class="flex-shrink-0 text-primary fs-3 me-3">
+                    <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div>
+                    <h5 class="fw-bold">Address</h5>
+                    <p class="text-muted">123 Green Valley Road,<br>Knowledge Park, City - 560001,<br>Country</p>
+                </div>
+            </div>
+            
+             <div class="d-flex mb-4">
+                <div class="flex-shrink-0 text-primary fs-3 me-3">
+                    <i class="bi bi-envelope-fill"></i>
+                </div>
+                <div>
+                    <h5 class="fw-bold">Email</h5>
+                    <p class="text-muted"><a href="mailto:info@greenvalley.edu" class="text-reset text-decoration-none">info@greenvalley.edu</a><br>
+                    <a href="mailto:admissions@greenvalley.edu" class="text-reset text-decoration-none">admissions@greenvalley.edu</a></p>
+                </div>
+            </div>
+            
+             <div class="d-flex mb-4">
+                <div class="flex-shrink-0 text-primary fs-3 me-3">
+                    <i class="bi bi-telephone-fill"></i>
+                </div>
+                <div>
+                    <h5 class="fw-bold">Phone</h5>
+                    <p class="text-muted">+1 234 567 890<br>+1 987 654 321</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-7">
+            <div class="card border-0 shadow-lg p-4">
+                <div class="card-body">
+                    <h3 class="fw-bold mb-4">Send us a Message</h3>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control bg-light" id="name" placeholder="John Doe">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control bg-light" id="email" placeholder="name@example.com">
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control bg-light" id="subject" placeholder="Admission Inquiry">
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control bg-light" id="message" rows="5" placeholder="How can we help you?"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary px-5 py-2" onclick="alert('Thank you for your message! This is a demo site, so no email was sent.'); return false;">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
