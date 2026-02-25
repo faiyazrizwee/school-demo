@@ -300,12 +300,20 @@ h6,
 }
 
 
+/* Hero Section - Fixed */
 .hero-section {
-    background: linear-gradient(rgba(93, 140, 123, 0.7), rgba(138, 178, 166, 0.6)), url('../images/hero_bg.png');
+    background: linear-gradient(rgba(106, 140, 123, 0.7), rgba(106, 140, 122, 0.6)), url('../images/hero_bg.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     color: white;
-    padding: 150px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* Optional: Add a subtle animation to the background */
@@ -324,21 +332,81 @@ h6,
 
 /* Ensure content is properly centered */
 .hero-section .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 80px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Make text more readable with the overlay */
+.hero-section .text-white-50 {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 100vh;
+        background-position: center center;
+        background-size: cover;
+        animation: none; /* Remove animation on mobile for better performance */
+        padding: 60px 0;
+    }
+    
+    .hero-section .container {
+        padding: 40px 15px;
+    }
+    
+    .hero-section h1.display-3 {
+        font-size: 2.5rem; /* Smaller font size on mobile */
+        line-height: 1.2;
+        margin-bottom: 1rem !important;
+    }
+    
+    .hero-section p.lead {
+        font-size: 1.1rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    /* Stack buttons on mobile */
+    .hero-section .d-sm-flex {
+        flex-direction: column;
+        gap: 15px !important;
+    }
+    
+    .hero-section .btn {
+        width: 100%;
+        margin: 5px 0 !important;
+        padding: 12px 20px !important;
+        font-size: 1rem !important;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .hero-section h1.display-3 {
+        font-size: 2rem;
+    }
+    
+    .hero-section p.lead {
+        font-size: 1rem !important;
+    }
+    
+    .hero-section .container {
+        padding: 30px 15px;
+    }
+}
+
+/* Landscape orientation fix */
+@media (max-width: 850px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 120vh;
+        padding: 40px 0;
+    }
 }
 
 /* Make text more readable with the overlay */
 .text-white-50 {
   color: rgba(255, 255, 255, 0.8) !important;
-}
-
-.hero-section {
-    background: linear-gradient(rgba(13, 71, 161, 0.6), rgba(13, 71, 161, 0.4)), url('../images/hero_bg.png');
-    background-size: cover;
-    background-position: center;
-    color: var(--light-bg);
-    padding: 150px 0;
 }
 
 .section-title {
